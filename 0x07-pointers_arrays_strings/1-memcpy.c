@@ -1,26 +1,17 @@
-#include "holberton.h"
-
 /**
- * _memcpy - Write a function that copies memory area.
- * The _memcpy() function copies n bytes from memory area src to memory area
- * dest
- *
- * @dest: This is the output string
- * @src: This is my input string
- * @n: This is the number bytes to copy
- *
- * Return: This is the string copied
- */
-
+* _memcpy - copies memory area
+* @dest: memory area to copy the bytes to
+* @src: memory area to copy the bytes from
+* @n: number of bytes to copy
+*
+* Return: a pointer to the memory area dest
+*/
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int count;
-	char *pDst = dest;
-	char const *pSrc =  src;
+	unsigned int i;
 
-	for (count = 0; count < n; count++)
-	{
-		*pDst++ = *pSrc++;
-	}
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
+
 	return (dest);
 }
